@@ -4,8 +4,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
 from app.database.connection import get_db
-from app.models.experience import Experience
-from app.schemas.experience import ExperienceCreate, ExperienceResponse
+from app.models.experiences import Experience
+from app.schemas.experiences import ExperienceCreate, ExperienceResponse
 
 
 router = APIRouter(
