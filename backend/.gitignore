@@ -12,6 +12,10 @@ __pycache__/
 .vscode/
 .idea/
 
+#database
+portfolio.db
+test.db 
+
 # OS files
 .DS_Store
 Thumbs.db
