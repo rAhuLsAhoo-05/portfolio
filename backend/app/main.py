@@ -4,10 +4,12 @@ from app.database.connection import engine, Base
 from app.models.skills import Skill
 from app.models.projects import Project
 from app.models.experiences import Experience
+from app.models.profile import Profile
 
 from app.routes.skills import router as skills_router
 from app.routes.projects import router as projects_router
 from app.routes.experiences import router as experience_router
+from app.routes.profile import router as profile_router
 
 # Create all tables
 Base.metadata.create_all(bind=engine)
@@ -21,6 +23,7 @@ app = FastAPI(
 app.include_router(skills_router)
 app.include_router(projects_router)
 app.include_router(experience_router)
+app.include_router(profile_router)
 
 @app.get("/")
 def root():
