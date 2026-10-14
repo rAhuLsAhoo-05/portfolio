@@ -3,8 +3,8 @@ from typing import List
 from sqlalchemy.orm import Session
 
 from app.database.connection import get_db
-from app.models.skill import Skill
-from app.schemas.skill import SkillCreate, SkillResponse
+from backend.app.models.skills import Skill
+from backend.app.schemas.skills import SkillCreate, SkillResponse
 
 
 router = APIRouter(

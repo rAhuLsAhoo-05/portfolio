@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from app.database.connection import engine, Base
-from app.models.skill import Skill
+from backend.app.models.skills import Skill
 from app.routes.skills import router as skills_router
 
 # Create all tables
