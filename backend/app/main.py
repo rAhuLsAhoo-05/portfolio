@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 from app.database.connection import engine, Base
-from backend.app.models.skills import Skill
+from app.models.skills import Skill
+from app.models.projects import Project
+
 from app.routes.skills import router as skills_router
+from app.routes.projects import router as projects_router
 
 # Create all tables
 Base.metadata.create_all(bind=engine)
@@ -13,6 +16,7 @@ app = FastAPI(
 )
 
 app.include_router(skills_router)
+app.include_router(projects_router)
 
 @app.get("/")
 def root():
